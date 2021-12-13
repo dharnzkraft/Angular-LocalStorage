@@ -1,0 +1,342 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-content{
+    width: 40%;
+    margin: auto;
+    height: 100vh;
+    background: #EE7023;
+    color: #fff;
+
+}
+
+
+
+
+.more_info_grid {
+    padding: 0px 0px 0px;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    // grid-template-columns:  1fr;
+  }
+  
+  
+  .more-info .left-image img {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .more-info.for_inner_pages {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .more-info.for_inner_pages .left-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+  
+  .more-info .more-info-content {
+    background-color: transparent !important;
+    z-index: 17 !important;
+  }
+  
+  .more-info .right-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    padding-top: 40px;
+  }
+  
+  .rtc_image {
+    display: none;
+  }
+  
+  .more-info .right-content span {
+    font-size: 20px;
+    color: #666;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .more-info .right-content h2 {
+    font-size: 52px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-rendering: geometricPrecision;
+    text-align: left;
+    text-transform: capitalize;
+  }
+  
+  .more-info .right-content em {
+    font-style: normal;
+    color: var(--mainSecondaryColor);
+  }
+  
+  .more-info .right-content p {
+    margin-bottom: 30px;
+  }
+  
+  .more_info_grid p.signupp {
+    font-size: 18px;
+  }
+  
+  .more_info_grid p.fgpass {
+    font-size: 18px;
+  }
+  
+  .left-content {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    background: #fbf2ea;
+    height: 100vh;
+  }
+  
+  .left-content-container {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .left-content-info {
+    position: absolute;
+    height: 280px;
+    width: 280px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: rgba(39, 50, 114, 0.14) 0px 0px 54px 0px;
+    font-weight: bold;
+  }
+  
+  .left-content-info p {
+    font-size: 17px;
+  }
+  
+  .box1 {
+    top: 20%;
+    left: 35%;
+    z-index: 900;
+    animation: rotateIconOne;
+    animation-duration: 5.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+   
+  }
+  
+  .box2 {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    z-index: 800;
+    animation: rotateIconTwo;
+    animation-duration: 5.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+  
+  .box3 {
+    position: absolute;
+    top: 35%;
+    right: 14%;
+    animation: rotateIconThree;
+    animation-duration: 5.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+  
+  .box4 {
+    position: absolute;
+    top: 63%;
+    left: 18%;
+    animation: rotateIconFour;
+    animation-duration: 5.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+  
+  .box5 {
+    position: absolute;
+    top: 63%;
+    right: 22%;
+    animation: rotateIconFive;
+    animation-duration: 5.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+  
+  .box6 {
+    position: absolute;
+    top: 75%;
+    left: 35%;
+  }
+  
+  .box7 {
+    position: absolute;
+    top: 52%;
+    left: 35%;
+    z-index: 1000;
+    background: #fff;
+    animation: autoRotate;
+    animation-duration: 5.3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    //  background: rgb(54, 15, 15); 
+    
+  }
+  
+  
+  
+  
+  
+  @keyframes rotateIconOne {
+    0% {
+      top: 20%;
+      left: 35%;
+      transform: scale(1);
+      transform: rotate(0deg);
+    }
+    50% {
+      top: 10%;
+      left: 35%;
+      font-weight: bold;
+    }
+    100% {
+      top: 20%;
+      left: 35%;
+    }
+  }
+  
+  @keyframes rotateIconTwo {
+    0% {
+      top: 35%;
+      left: 10%;
+    }
+    50% {
+      top: 20%;
+      left: 5%;
+      font-weight: bold;
+    }
+    100% {
+      top: 35%;
+      left: 10%;
+    }
+  }
+  
+  @keyframes rotateIconThree {
+    0% {
+      top: 35%;
+      right: 14%;
+    }
+    50% {
+      top: 20%;
+      right: 5%;
+      font-weight: bold;
+    }
+    100% {
+      top: 35%;
+      right: 14%;
+    }
+  }
+  
+  @keyframes rotateIconFour {
+    0% {
+      top: 63%;
+      left: 18%;
+    }
+    50% {
+      top: 68%;
+      left: 8%;
+      font-weight: bold;
+    }
+    100% {
+      top: 63%;
+      left: 18%;
+    }
+  }
+  
+  @keyframes rotateIconFive {
+    0% {
+      top: 63%;
+      right: 22%;
+    }
+    50% {
+      top: 68%;
+      right: 8%;
+      font-weight: bold;
+    }
+    100% {
+      top: 63%;
+      right: 22%;
+    }
+  }
+  
+  @keyframes rotateIcon {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes autoRotate {
+    0% {
+      transform: scale(1);
+    }
+    52% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .box-info {
+    font-family: inherit;
+    text-align: center;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    width: 70%;
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    // color: var(--mainSecondaryColor); 
+    line-height: 1.4;
+  }
+
+
+  @media (max-width: 1024px) {
+      .left-content{
+          display: none;
+      }
+      .right-content{
+          width: 100% !important;
+      }
+  }

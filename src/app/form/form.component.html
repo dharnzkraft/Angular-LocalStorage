@@ -1,0 +1,141 @@
+<app-header></app-header>
+<div class="content">
+  <div class="container">
+    <form [formGroup]="myform" (ngSubmit)="submit()">
+      <div *ngIf="steps == 1">
+        <p>
+          The loan must be secured by mortgage of real estate acceptable to the bank. 
+          Please note, that by using these financing services, you are assuming financial obligations. 
+          Improper fulfilment or non-fulfilment of financial obligations may have a negative 
+          impact on your credit history and make borrowing more expensive; you also risk losing ownership rights to the mortgaged real estate.
+        </p>
+        
+      </div>
+      <div *ngIf="steps == 2">
+        <p><b>Question 1 :</b> What is your total Monthly income ?</p>
+        <div class="mb-3">
+          <label for="income" class="form-label">Monthly Income</label>
+          <input class="form-control" formControlName="income" id="income" />
+        </div>
+        <span *ngIf="Income?.invalid" class="error" >Your input required</span>
+        <div *ngIf="Income?.valid">
+          <button
+            (click)="next()"
+            class="swed-btn--btn-primary mx-2"
+            *ngIf="steps != 5 && steps != 1"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+      <div *ngIf="steps == 3">
+        <p><b>Question 2 :</b> What is your down payment ?</p>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Down Payment ?</label
+          >
+          <input class="form-control" formControlName="downPayment" />
+        </div>
+        <span *ngIf="DownPayment?.invalid" class="error" >Your input required</span>
+
+        <div *ngIf="DownPayment?.valid">
+          <button
+            (click)="next()"
+            class="swed-btn--btn-primary mx-2"
+            *ngIf="steps != 5 && steps != 1"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="steps == 4">
+        <p><b>Question 3 :</b> would you be able to balance up in 6 months?</p>
+        <div class="mb-3">
+          <select
+            formControlName="loan"
+            class="form-select"
+            aria-label="Default select example"
+          >
+            <option selected>Select Number of month</option>
+            <option *ngFor="let opt of options" [value]="opt.opts" >{{opt.opts}}</option>
+          </select>
+          
+        </div>
+        <span *ngIf="Loan?.invalid" class="error" >Your input required</span>
+        <div *ngIf="Loan?.valid">
+          <button
+            (click)="next()"
+            class="swed-btn--btn-primary mx-2"
+            *ngIf="steps != 5 && steps != 1"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="steps == 5">
+
+        <p><b>Question 4 :</b>
+          <span >How much would you pay monthly?</span>
+          <!-- <span *ngIf="Loan == 'No'" >Input you preferred monthly payment</span> -->
+        </p>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Loan term</label
+          >
+          <input class="form-control" formControlName="term" />
+        </div>
+        <span *ngIf="Term?.invalid" class="error" >Your input required</span>
+
+        <div *ngIf="Term?.valid">
+
+          <button
+        type="submit"
+        class="swed-btn--btn-success mx-2"
+        *ngIf="steps == 5"
+        
+      >
+        Submit
+      </button>
+          
+        </div>
+      </div>
+      <div *ngIf="steps == 6">
+        <div class="mb-3">
+          <h3>Preview</h3>
+          {{ answers$ }}
+          {{this.answers$.loan}}
+        </div>
+      </div>
+
+      <br />
+      <button (click)="next()" class="swed-btn--btn-primary" *ngIf="steps == 1">
+        Proceed to form
+      </button>
+      <button
+        class="swed-btn--btn-secondary"
+        *ngIf="steps != 2 && steps != 1"
+        (click)="previous()"
+      >
+        Previous
+      </button>
+      <!-- <button
+      (click)="next()"
+      class="swed-btn--btn-primary mx-2"
+      *ngIf="steps != 6 && steps != 1"
+    >
+      Next
+    </button> -->
+      
+      <button
+        type="submit"
+        class="swed-btn--btn-success mx-2"
+        *ngIf="steps == 6"
+        (click)="serializeSummary()"
+      >
+        Re-submit Entry
+      </button>
+    </form>
+  </div>
+</div>

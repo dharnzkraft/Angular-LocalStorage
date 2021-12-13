@@ -1,0 +1,40 @@
+.pageheader{
+    border-bottom: 1px solid #EE7023;
+    z-index: 4;
+    position: static;
+
+    .page-header-wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 1260px;
+        height: 60px;
+        z-index: unset;
+        padding: 0 20px;
+
+        .logo-holder{
+            margin: 0;
+            // padding: 4px 5px;
+            // width: 149px;
+            // height: 34px;
+
+            .logo{
+                width: 150px;
+            }
+        }
+    }
+}
+
+.banner{
+    background: #EE7023;
+    width: 100%;
+    padding: 1px 0;
+
+    
+}
+
+ol li, ol li a{
+    color: #fff;
+    text-decoration: none;
+}
